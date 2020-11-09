@@ -170,10 +170,10 @@ variable "root_volume_encrypted" {
   default     = false
 }
 
-variable "wait_for_capacity_timeout" {
-  description = "A maximum duration that Terraform should wait for ASG instances to be healthy before timing out. Setting this to '0' causes Terraform to skip all Capacity Waiting behavior."
-  type        = string
-  default     = "10m"
+variable "ebs_block_device" {
+  description = "Additional EBS block devices to attach to autoscaling instances" 
+  type        = list(map(string))
+  default     = []
 }
 
 variable "service_linked_role_arn" {
