@@ -171,7 +171,7 @@ variable "root_volume_encrypted" {
 }
 
 variable "ebs_block_device" {
-  description = "Additional EBS block devices to attach to autoscaling instances" 
+  description = "Additional EBS block devices to attach to autoscaling instances"
   type        = list(map(string))
   default     = []
 }
